@@ -61,3 +61,4 @@ C:\Users\marios\source\repos\PlumGuide.PlutoRover\src\PlumGuide.PlutoRover\bin\D
 C:\Users\marios\source\repos\PlumGuide.PlutoRover\src\PlumGuide.PlutoRover\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Users\marios\source\repos\PlumGuide.PlutoRover\src\PlumGuide.PlutoRover\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
 C:\Users\marios\source\repos\PlumGuide.PlutoRover\src\PlumGuide.PlutoRover\bin\Debug\net5.0\Swashbuckle.AspNetCore.Newtonsoft.dll
+C:\Users\marios\source\repos\PlumGuide.PlutoRover\src\PlumGuide.PlutoRover\bin\Debug\net5.0\Swashbuckle.AspNetCore.Annotations.dll

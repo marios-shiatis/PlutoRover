@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "sYQbn7IV+IzfLSdds2MRcl0kVoTnxGIXCJGCZDgrzRAyt6j/j4aI031Nh1GEXRy4R3xRKXFvGVA3YJrp+GuLKw==",
+  "dgSpecHash": "//CwMCeWA6TRyVPKDntss5wQ4PHDkv0HUhuIXFK302jSF+AgH2L8/ImT5SarLSDsxs7nFcEC0baTJZQptdb5Nw==",
   "success": true,
   "projectFilePath": "C:\\Users\\marios\\source\\repos\\PlumGuide.PlutoRover\\src\\PlumGuide.PlutoRover\\PlumGuide.PlutoRover.Web.csproj",
   "expectedPackageFiles": [
@@ -12,6 +12,7 @@
     "C:\\Users\\marios\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\marios\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512",
     "C:\\Users\\marios\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
+    "C:\\Users\\marios\\.nuget\\packages\\swashbuckle.aspnetcore.annotations\\6.1.1\\swashbuckle.aspnetcore.annotations.6.1.1.nupkg.sha512",
     "C:\\Users\\marios\\.nuget\\packages\\swashbuckle.aspnetcore.newtonsoft\\6.1.1\\swashbuckle.aspnetcore.newtonsoft.6.1.1.nupkg.sha512",
     "C:\\Users\\marios\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.1.1\\swashbuckle.aspnetcore.swagger.6.1.1.nupkg.sha512",
     "C:\\Users\\marios\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.1.1\\swashbuckle.aspnetcore.swaggergen.6.1.1.nupkg.sha512",

@@ -19,7 +19,7 @@ namespace PlumGuide.PlutoRover.Web.Services
         public MoveResult Move(NavigationCommand navigationCommand)
         {
             ValidateCommand(navigationCommand.Command);
-
+            
             foreach (var command in navigationCommand.Command)
             {
                 switch (command)
@@ -39,6 +39,7 @@ namespace PlumGuide.PlutoRover.Web.Services
                     default:
                         break;
                 }
+                Guard.WrapEdges(_roverPosition, _planet);
             }
 
             return MoveResult.Success(_roverPosition);

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ENzBS0XSuIEY7SUBDXReEMYz3Uz9WhMkLB5K4NXrtRncpvuey/Y/vFyNIg8LtvDt/EpR60pjtkJAk3GDgiKy/g==",
+  "dgSpecHash": "ulA7Lj1kvyura36rD97xXBN275vhF1fq/yEjsg7LyBF7UmFF9WDQfcDTV+i5DCV2wXGwDhZJP+OxyexfnWv/jA==",
   "success": true,
   "projectFilePath": "C:\\Users\\marios\\source\\repos\\PlumGuide.PlutoRover\\src\\PlumbGuide.PlutoRover.Tests\\PlumbGuide.PlutoRover.Tests.csproj",
   "expectedPackageFiles": [
@@ -39,6 +39,7 @@
     "C:\\Users\\marios\\.nuget\\packages\\runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\marios\\.nuget\\packages\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\marios\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
+    "C:\\Users\\marios\\.nuget\\packages\\swashbuckle.aspnetcore.annotations\\6.1.1\\swashbuckle.aspnetcore.annotations.6.1.1.nupkg.sha512",
     "C:\\Users\\marios\\.nuget\\packages\\swashbuckle.aspnetcore.newtonsoft\\6.1.1\\swashbuckle.aspnetcore.newtonsoft.6.1.1.nupkg.sha512",
     "C:\\Users\\marios\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.1.1\\swashbuckle.aspnetcore.swagger.6.1.1.nupkg.sha512",
     "C:\\Users\\marios\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.1.1\\swashbuckle.aspnetcore.swaggergen.6.1.1.nupkg.sha512",
