@@ -1,5 +1,6 @@
 ﻿using PlumGuide.PlutoRover.Web.Models;
 using System;
+using System.Linq;
 
 namespace PlumGuide.PlutoRover.Web.Services
 {
@@ -23,6 +24,11 @@ namespace PlumGuide.PlutoRover.Web.Services
             return point > 0
                 ? Math.Abs(point % maxSize)
                 : maxSize - Math.Abs(point % maxSize);
+        }
+
+        public static bool ObstacleDetected(RoverPosition roverPosition, Planet planet)
+        {
+            return planet.Obstacles.Any(position => position.X == roverPosition.X && position.Y == roverPosition.Y);
         }
     }
 }

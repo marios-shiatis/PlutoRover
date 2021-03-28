@@ -9,7 +9,7 @@ namespace PlumGuide.PlutoRover.Web.Services
     public class NavigateService : INavigateService
     {
         private readonly Planet _planet;
-        private readonly RoverPosition _roverPosition;
+        private RoverPosition _roverPosition;
 
         public NavigateService(Planet planet, RoverPosition roverPosition)
         {
@@ -19,27 +19,33 @@ namespace PlumGuide.PlutoRover.Web.Services
         public MoveResult Move(NavigationCommand navigationCommand)
         {
             ValidateCommand(navigationCommand.Command);
-            
             foreach (var command in navigationCommand.Command)
             {
+                var tempRoverPosition = _roverPosition;
                 switch (command)
                 {
                     case 'F':
-                        MoveForwards();
+                        MoveForwards(tempRoverPosition);
                         break;
                     case 'B':
-                        MoveBackwards();
+                        MoveBackwards(tempRoverPosition);
                         break;
                     case 'L':
-                        TurnLeft();
+                        TurnLeft(tempRoverPosition);
                         break;
                     case 'R':
-                        TurnRight();
+                        TurnRight(tempRoverPosition);
                         break;
                     default:
                         break;
                 }
+
                 Guard.WrapEdges(_roverPosition, _planet);
+
+                if (Guard.ObstacleDetected(tempRoverPosition, _planet))
+                    throw new NavigationException($"Obstacle found on coordinates [X:{tempRoverPosition.X}, Y:{tempRoverPosition.Y}]");
+                else
+                    _roverPosition = tempRoverPosition;
             }
 
             return MoveResult.Success(_roverPosition);
@@ -56,44 +62,44 @@ namespace PlumGuide.PlutoRover.Web.Services
             }
         }
 
-        private void MoveForwards()
+        private void MoveForwards(RoverPosition position)
         {
-            if (_roverPosition.Direction == CompassDirections.North)
-                _roverPosition.Y += 1;
-            if (_roverPosition.Direction == CompassDirections.East)
-                _roverPosition.X += 1;
-            if (_roverPosition.Direction == CompassDirections.South)
-                _roverPosition.Y -= 1;
-            if (_roverPosition.Direction == CompassDirections.West)
-                _roverPosition.X -= 1;
+            if (position.Direction == CompassDirections.North)
+                position.Y += 1;
+            if (position.Direction == CompassDirections.East)
+                position.X += 1;
+            if (position.Direction == CompassDirections.South)
+                position.Y -= 1;
+            if (position.Direction == CompassDirections.West)
+                position.X -= 1;
         }
 
-        private void MoveBackwards()
+        private void MoveBackwards(RoverPosition position)
         {
-            if (_roverPosition.Direction == CompassDirections.North)
-                _roverPosition.Y -= 1;
-            if (_roverPosition.Direction == CompassDirections.East)
-                _roverPosition.X -= 1;
-            if (_roverPosition.Direction == CompassDirections.South)
-                _roverPosition.Y += 1;
-            if (_roverPosition.Direction == CompassDirections.West)
-                _roverPosition.X += 1;
+            if (position.Direction == CompassDirections.North)
+                position.Y -= 1;
+            if (position.Direction == CompassDirections.East)
+                position.X -= 1;
+            if (position.Direction == CompassDirections.South)
+                position.Y += 1;
+            if (position.Direction == CompassDirections.West)
+                position.X += 1;
         }
 
-        private void TurnRight()
+        private void TurnRight(RoverPosition position)
         {
-            _roverPosition.Direction =
-                _roverPosition.Direction + 1 > CompassDirections.West
+            position.Direction =
+                position.Direction + 1 > CompassDirections.West
                 ? CompassDirections.North
-                : _roverPosition.Direction + 1;
+                : position.Direction + 1;
         }
 
-        private void TurnLeft()
+        private void TurnLeft(RoverPosition position)
         {
-            _roverPosition.Direction =
-               _roverPosition.Direction - 1 < CompassDirections.North
+            position.Direction =
+               position.Direction - 1 < CompassDirections.North
                ? CompassDirections.West
-               : _roverPosition.Direction - 1;
+               : position.Direction - 1;
         }
     }
 }

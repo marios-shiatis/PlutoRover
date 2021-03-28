@@ -118,6 +118,30 @@ namespace PlumbGuide.PlutoRover.Tests
                 .WithMessage($"Command {command} is not a known command. Please use only the following characters: 'F','B','L','R'");
         }
 
+        [Theory]
+        [InlineData("FF", 0, 2)]
+        [InlineData("FFRFF", 2, 2)]
+        [InlineData("FFFFRFFFF",  4, 4)]
+        [InlineData("FFFFRFFFFRRFFFF",0, 4)]
+        public void OnOnstacleDetection_RoverThrowsAndReportsObstacleCoordinates(string command, int obstacleX, int obstacleY)
+        {
+            //Arrange
+            InitialiseRoverLandingVariables(obstacles: new List<Obstacle> { new Obstacle { X = obstacleX, Y = obstacleY } });
+            var initialRoverPosition = _roverPosition;
+            _sut = new NavigateService(_planet, _roverPosition);
+
+            //Act
+            //Act
+            var navigationCommand = new NavigationCommand() { Command = command };
+            Action act = () => _sut.Move(navigationCommand);
+
+            //Assert
+            act.Should()
+                .Throw<NavigationException>()
+                .WithMessage($"Obstacle found on coordinates [X:{obstacleX}, Y:{obstacleY}]");
+            _roverPosition.Should().BeEquivalentTo(initialRoverPosition);
+        }
+
         private void InitialiseRoverLandingVariables(List<Obstacle> obstacles = null, CompassDirections? currentCompassDirection = null)
         {
             _obstacles = obstacles ?? new List<Obstacle>() {
