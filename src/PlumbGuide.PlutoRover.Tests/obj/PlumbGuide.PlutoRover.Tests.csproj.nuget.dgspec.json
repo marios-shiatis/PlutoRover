@@ -1,0 +1,163 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\marios\\source\\repos\\PlumGuide.PlutoRover\\src\\PlumbGuide.PlutoRover.Tests\\PlumbGuide.PlutoRover.Tests.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\marios\\source\\repos\\PlumGuide.PlutoRover\\src\\PlumbGuide.PlutoRover.Tests\\PlumbGuide.PlutoRover.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\marios\\source\\repos\\PlumGuide.PlutoRover\\src\\PlumbGuide.PlutoRover.Tests\\PlumbGuide.PlutoRover.Tests.csproj",
+        "projectName": "PlumbGuide.PlutoRover.Tests",
+        "projectPath": "C:\\Users\\marios\\source\\repos\\PlumGuide.PlutoRover\\src\\PlumbGuide.PlutoRover.Tests\\PlumbGuide.PlutoRover.Tests.csproj",
+        "packagesPath": "C:\\Users\\marios\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\marios\\source\\repos\\PlumGuide.PlutoRover\\src\\PlumbGuide.PlutoRover.Tests\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\marios\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\marios\\source\\repos\\PlumGuide.PlutoRover\\src\\PlumGuide.PlutoRover\\PlumGuide.PlutoRover.Web.csproj": {
+                "projectPath": "C:\\Users\\marios\\source\\repos\\PlumGuide.PlutoRover\\src\\PlumGuide.PlutoRover\\PlumGuide.PlutoRover.Web.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "FluentAssertions": {
+              "target": "Package",
+              "version": "[5.10.3, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.7.1, )"
+            },
+            "coverlet.collector": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.3.0, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            },
+            "xunit.runner.visualstudio": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.4.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\marios\\source\\repos\\PlumGuide.PlutoRover\\src\\PlumGuide.PlutoRover\\PlumGuide.PlutoRover.Web.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\marios\\source\\repos\\PlumGuide.PlutoRover\\src\\PlumGuide.PlutoRover\\PlumGuide.PlutoRover.Web.csproj",
+        "projectName": "PlumGuide.PlutoRover.Web",
+        "projectPath": "C:\\Users\\marios\\source\\repos\\PlumGuide.PlutoRover\\src\\PlumGuide.PlutoRover\\PlumGuide.PlutoRover.Web.csproj",
+        "packagesPath": "C:\\Users\\marios\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\marios\\source\\repos\\PlumGuide.PlutoRover\\src\\PlumGuide.PlutoRover\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\marios\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.6.3, )"
+            },
+            "Swashbuckle.AspNetCore.Newtonsoft": {
+              "target": "Package",
+              "version": "[6.1.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
