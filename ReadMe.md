@@ -9,11 +9,11 @@
 	1. There is validation in place that ensures the provided commands include only the following letters: F,B,L,R.
 
 #### Example Input 
-'RFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF'
+`RFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF`
 
 #### Example Output
 
-'''JSON 
+```JSON 
 {
   "succeeded": true,
   "errors": null,
@@ -27,7 +27,7 @@
     "y": 0
   }
 }
-'''
+```
 
 #### Assestment Feedback
 
