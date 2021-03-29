@@ -72,6 +72,8 @@ namespace PlumbGuide.PlutoRover.Tests
 
         [Theory]
         [InlineData("FFFF", CompassDirections.North, 0, 4, CompassDirections.North)]
+        [InlineData("BBBB", CompassDirections.North, 0, 96, CompassDirections.North)]
+        [InlineData("LFFF", CompassDirections.North, 97, 0, CompassDirections.West)]
         [InlineData("FFRFF", CompassDirections.North, 2, 2, CompassDirections.East)]
         [InlineData("FFFFRFFFF", CompassDirections.North, 4, 4, CompassDirections.East)]
         [InlineData("FFFFRFFFFRRFFFF", CompassDirections.North, 0, 4, CompassDirections.West)]

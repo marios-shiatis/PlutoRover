@@ -46,7 +46,7 @@ namespace PlumGuide.PlutoRover.Web.Services
                         break;
                 }
 
-                Guard.WrapEdges(_roverPosition, _planet);
+                Guard.WrapEdges(tempRoverPosition, _planet);
 
                 if (Guard.ObstacleDetected(tempRoverPosition, _planet))
                 {
