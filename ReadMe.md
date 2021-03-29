@@ -37,4 +37,4 @@ Do you have any thoughts or feedback you would like to provide for this assessme
 Answer:
 In the assestment description it's not clear what is an `obstacle`. 
 Who defines the obstacles and how have they been identified?  
-For that reason, I assume that the obstacles where gathered from previous trips/feedback to pluto, so I predefined a list with obstacles in the Startup.cs
+For that reason, I assume that the obstacles were gathered from previous trips/feedback from pluto, so I predefined a list with obstacles in the Startup.cs
