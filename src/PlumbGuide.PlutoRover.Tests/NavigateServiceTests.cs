@@ -119,27 +119,25 @@ namespace PlumbGuide.PlutoRover.Tests
         }
 
         [Theory]
-        [InlineData("FF", 0, 2)]
-        [InlineData("FFRFF", 2, 2)]
-        [InlineData("FFFFRFFFF",  4, 4)]
-        [InlineData("FFFFRFFFFRRFFFF",0, 4)]
-        public void OnOnstacleDetection_RoverThrowsAndReportsObstacleCoordinates(string command, int obstacleX, int obstacleY)
+        [InlineData("FF", 0, 2, 0, 1)]
+        [InlineData("FFRFF", 2, 2, 1, 2)]
+        [InlineData("FFFFRFFFF", 4, 4, 3, 4)]
+        [InlineData("FFFFRFFFFRRFFFF", 0, 4, 0, 3)]
+        public void OnOnstacleDetection_RoverThrowsAndReportsObstacleCoordinates(string command, int obstacleX, int obstacleY, int newX, int newY)
         {
             //Arrange
             InitialiseRoverLandingVariables(obstacles: new List<Obstacle> { new Obstacle { X = obstacleX, Y = obstacleY } });
-            var initialRoverPosition = _roverPosition;
             _sut = new NavigateService(_planet, _roverPosition);
 
             //Act
-            //Act
             var navigationCommand = new NavigationCommand() { Command = command };
-            Action act = () => _sut.Move(navigationCommand);
+            var result = _sut.Move(navigationCommand);
 
             //Assert
-            act.Should()
-                .Throw<NavigationException>()
-                .WithMessage($"Obstacle found on coordinates [X:{obstacleX}, Y:{obstacleY}]");
-            _roverPosition.Should().BeEquivalentTo(initialRoverPosition);
+            result.RoverPosition.X.Should().Be(newX);
+            result.RoverPosition.Y.Should().Be(newY);
+            result.Obstacle.X.Should().Be(obstacleX);
+            result.Obstacle.Y.Should().Be(obstacleY);
         }
 
         private void InitialiseRoverLandingVariables(List<Obstacle> obstacles = null, CompassDirections? currentCompassDirection = null)

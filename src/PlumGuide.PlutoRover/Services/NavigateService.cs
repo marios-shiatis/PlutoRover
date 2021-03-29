@@ -21,7 +21,13 @@ namespace PlumGuide.PlutoRover.Web.Services
             ValidateCommand(navigationCommand.Command);
             foreach (var command in navigationCommand.Command)
             {
-                var tempRoverPosition = _roverPosition;
+                var tempRoverPosition = new RoverPosition()
+                {
+                    X = _roverPosition.X,
+                    Y = _roverPosition.Y,
+                    Direction = _roverPosition.Direction
+                };
+
                 switch (command)
                 {
                     case 'F':
@@ -43,9 +49,16 @@ namespace PlumGuide.PlutoRover.Web.Services
                 Guard.WrapEdges(_roverPosition, _planet);
 
                 if (Guard.ObstacleDetected(tempRoverPosition, _planet))
-                    throw new NavigationException($"Obstacle found on coordinates [X:{tempRoverPosition.X}, Y:{tempRoverPosition.Y}]");
+                {
+                    return MoveResult.Success(_roverPosition,
+                        obstacle: new Obstacle { X = tempRoverPosition.X, Y = tempRoverPosition.Y });
+                }
                 else
-                    _roverPosition = tempRoverPosition;
+                {
+                    _roverPosition.X = tempRoverPosition.X;
+                    _roverPosition.Y = tempRoverPosition.Y;
+                    _roverPosition.Direction = tempRoverPosition.Direction;
+                }
             }
 
             return MoveResult.Success(_roverPosition);
