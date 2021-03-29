@@ -21,7 +21,7 @@ namespace PlumGuide.PlutoRover.Web.Controllers
         {
             var result = _navigateService.Move(navigationCommand);
             if (result.Succeeded)
-                return Ok(result.RoverPosition);
+                return Ok(result);
 
             return BadRequest(result.Errors);
         }

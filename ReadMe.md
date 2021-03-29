@@ -8,6 +8,27 @@
 3. Use the swagger interface to enter commands for the Rover Navigation.
 	1. There is validation in place that ensures the provided commands include only the following letters: F,B,L,R.
 
+#### Example Input 
+'RFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF'
+
+#### Example Output
+
+'''JSON 
+{
+  "succeeded": true,
+  "errors": null,
+  "roverPosition": {
+    "direction": "East",
+    "x": 32,
+    "y": 0
+  },
+  "obstacle": {
+    "x": 33,
+    "y": 0
+  }
+}
+'''
+
 #### Assestment Feedback
 
 Question:
